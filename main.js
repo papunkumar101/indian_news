@@ -6,9 +6,9 @@ $(document).ready(function(){
   alert(srch);
   //   });
 
-  var url=`http://newsapi.org/v2/top-headlines?q=${srch}&country=in&apiKey=9f8102ad476e4acf9a2fbca37b35e813`; 
+  var url=`https://newsapi.org/v2/top-headlines?q=${srch}&country=in&apiKey=9f8102ad476e4acf9a2fbca37b35e813`; 
 }else{
-var url=`http://newsapi.org/v2/top-headlines?country=in&apiKey=9f8102ad476e4acf9a2fbca37b35e813`; 
+var url=`https://newsapi.org/v2/top-headlines?country=in&apiKey=9f8102ad476e4acf9a2fbca37b35e813`; 
 }
  
   
