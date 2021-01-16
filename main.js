@@ -1,24 +1,9 @@
-// tech sport news condition
-// if($("#tech").click(function(){
-//     var cat= "technology";
-// })
-// );else if($("#sport").click(function(){
-//   var cat= "sports";
-// })
-// );else{
- 
-//   var cat= "null";
-// }
+
 $(document).ready(function(){
-  // $("#srch_btn").click(function(){
-  var srch=$("#srch").val();
-  // });
-  
+  { 
 var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-       //console.log(this.responseText);
-      
       let result=JSON.parse(this.responseText);
       let res = result.articles;
      let newsHtml="";
@@ -43,12 +28,12 @@ var xhttp = new XMLHttpRequest();
         `;
         newsHtml += news;
        });
-      $("#data").html(newsHtml);  //body end
+      $("#data").html(newsHtml); 
        $(".nav").show();
   }else{
      $("#data").html(`<h3 style="color:gray;font-weight:bold;">sorry ,something Wrong!</h3><br><h3>Please Try After Sometime</h3>`);
      $(".nav").hide();
-  }         //readystate
+  }        
   if (this.readyState !== 4) {
      $("#data").html(`<div class="d-flex justify-content-center">
   <div class="spinner-border text-success" role="status">
@@ -56,10 +41,10 @@ var xhttp = new XMLHttpRequest();
   </div>
 </div>`);
   }
- };          //readystate change
+ };         
  
-// var cat=sports;
-   var url=`https://newsapi.org/v2/top-headlines?q=${srch}&country=in&apiKey=9f8102ad476e4acf9a2fbca37b35e813`; 
+
+   var url=`https://newsapi.org/v2/top-headlines?country=in&apiKey=9f8102ad476e4acf9a2fbca37b35e813`; 
   xhttp.open("GET",url , true);
   xhttp.send();
 });
