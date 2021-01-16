@@ -44,7 +44,7 @@ var xhttp = new XMLHttpRequest();
  };         
  
 
-   var url=`https://newsapi.org/v2/top-headlines?country=in&apiKey=9f8102ad476e4acf9a2fbca37b35e813`; 
+   let url=`https://newsapi.org/v2/top-headlines?country=in&apiKey=9f8102ad476e4acf9a2fbca37b35e813`; 
   xhttp.open("GET",url , true);
   xhttp.send();
 });
